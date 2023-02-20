@@ -1,0 +1,44 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+.main-contact{
+   
+    h2{
+        font-size: 2rem;
+        padding: 0.5rem;
+        margin:0.2rem;
+    }
+    .contact-us {
+        .card-contact{
+            @extend %contact-style;
+        }
+        fieldset{
+           
+            .contact{
+                @include flex(0.5rem, space-between, column, center);
+                .nombre{
+                    padding: 0.3rem;
+                }
+                .email{
+                    padding: 0.3rem;
+                }
+            }
+            .mensaje{
+                @include flex (0.5rem, space-between,column, center);
+            }
+            div{
+                .botones{
+                    @extend %botones-style;
+    
+                }
+                .botones:hover{
+                    color: $color-fondo;
+                    background-color: $color-fuente;
+                }
+
+            }
+            
+        }
+    }
+}

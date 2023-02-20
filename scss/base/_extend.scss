@@ -1,0 +1,40 @@
+%card-style {
+  display: inline-block;
+  text-align: center;
+  margin: 1rem;
+  max-width: 410px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  background: rgb(194, 190, 191);
+  background: linear-gradient(
+    42deg,
+    rgba(206, 199, 201, 0.786) 0%,
+    rgba(197, 195, 195, 0.03) 100%
+  );
+}
+
+%card-title {
+  color: $color-fuente;
+}
+
+%card-description {
+  color: rgb(129, 91, 91);
+}
+
+%contact-style {
+  display: flex;
+  margin: 1rem;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+%botones-style {
+  margin: 1rem 1rem;
+  padding: 0.5rem;
+  background-color: $color-fondo;
+  color: $color-fuente;
+  border-radius: 0.5rem;
+  border-style: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+}

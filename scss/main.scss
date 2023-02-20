@@ -1,0 +1,245 @@
+@import "base/variables";
+@import "base/extend";
+@import "base/mixin";
+@import "html/nosotros";
+@import "html/actividades";
+@import "html/insumos";
+@import "html/contacto";
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*body*/
+body {
+  font-family: "Cinzel Decorative", cursive;
+}
+/*estilos del header*/
+header {
+  background-color: $color-fondo;
+  @include flex(0.5rem, space-between, none, none);
+  .logo-h1 {
+    width: 140px;
+    margin-left: 20px;
+    .img-logo {
+      padding: 0.5rem;
+    }
+    h1 {
+      display: none;
+    }
+  }
+  div {
+    nav {
+      @include flex(0.2rem, none, none, center);
+      .nav-list {
+        li {
+          @include flex(0.5rem, center, column, center);
+          //display: flex;
+          .nav-link {
+            color: $color-fuente;
+            padding: 0.2rem;
+          }
+          .nav-link:hover {
+            opacity: 65%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*comienzo estilos main*/
+/*contenido principal*/
+main {
+  @include flex(2rem, center, column, center);
+  font-size: 1rem;
+  .main-text {
+    h2 {
+      margin-bottom: 2rem;
+      font: size 1.5rem;
+      span {
+        display: block;
+      }
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  .img-ppal {
+    img {
+      height: auto;
+      width: 100%;
+    }
+    .p-img {
+      position: absolute;
+      top: 35rem;
+      right: 10%;
+      left: 55%;
+      color: whitesmoke;
+      text-decoration: bold;
+      font-weight: 700;
+      font-size: 0.6rem;
+    }
+  }
+}
+/*comienzo estilos section*/
+section {
+  display: flex;
+  div {
+    background-color: $color-fondo;
+    @include flex(0.5rem, space-around, column, center);
+    font-size: 0.7rem;
+
+    img {
+      width: 40%;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      max-width: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: $color-secundario;
+  p {
+    margin: 1rem;
+    padding: 0.3rem;
+    a {
+      text-decoration: none;
+      color: $color-fondo;
+      font-size: 0.7rem;
+    }
+    a:hover {
+      color: $color-iconos;
+    }
+  }
+  .container {
+    @include flex(1rem, space-between, column, center);
+    color: $color-fondo;
+    font-size: 0.7rem;
+    text-decoration: none;
+    .footer-icons {
+      a {
+        i {
+          color: $color-fondo;
+          font-size: 1.5rem;
+          margin: 0.5rem;
+        }
+        i:hover {
+          color: $color-iconos;
+        }
+      }
+    }
+    .button-copyright {
+      a {
+        text-decoration: none;
+        color: $color-fondo;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: $color-iconos;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-index {
+    @include grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "main main"
+      "section section"
+      "footer footer";
+    header {
+      grid-area: header;
+      display: block;
+      @include flex(0.5rem, space-between, none, center);
+      background-color: $color-fondo;
+      margin-bottom: 1rem;
+      height: 15rem;
+      .logo-h1 {
+        text-decoration: none;
+        @include flex(0.5rem, space-between, column, center);
+        h1 {
+          font-size: 1rem;
+          display: block;
+          text-decoration: none;
+          color: $color-fuente;
+        }
+        .logo-h1:hover {
+          opacity: 65%;
+        }
+      }
+
+      div {
+        nav {
+          .nav-list {
+            display: flex;
+
+            position: relative;
+            height: 6rem;
+            top: 0;
+            justify-content: end;
+            transition: none;
+            .nav-link {
+              display: inline-block;
+              font-weight: 700;
+
+              line-height: 4rem;
+              margin: 0 1rem;
+              transition: none;
+              padding: 1rem 0.5rem 1rem 0.5rem;
+            }
+            .nav-link:hover {
+              opacity: 0.65;
+            }
+          }
+        }
+      }
+    }
+    main {
+      grid-area: main;
+      .main-text:hover {
+        transform: scale(1.1);
+      }
+      .img-ppal {
+        .p-img {
+          font-size: 2rem;
+        }
+      }
+      .main-card {
+        .grid-main {
+          .card-one:hover {
+            transform: scale(1.1);
+          }
+          .card-two:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    section {
+      grid-area: section;
+    }
+    footer {
+      grid-area: footer;
+      p {
+        a {
+          text-decoration: none;
+          color: $color-fondo;
+        }
+        a:hover {
+          color: $color-iconos;
+        }
+      }
+    }
+  }
+
+}
