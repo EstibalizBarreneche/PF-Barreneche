@@ -1,0 +1,43 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/*estilos main*/
+main {
+
+
+  div {
+    margin: 1rem;
+    h2 {
+      margin-bottom: 2rem;
+      font: size 1.5rem;
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .card-container {
+    .card{
+
+        display: inline-block;
+
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+        margin: 0.5rem;
+        max-width: 410px;
+        padding: 1.5rem;
+        
+    }
+ 
+    .card-styles {
+      h2 {
+        color: $color-fuente;
+        @extend %card-title;
+      }
+      .img-description {
+        @extend %card-description;
+      }
+    }
+  }
+}

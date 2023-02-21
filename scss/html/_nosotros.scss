@@ -1,0 +1,36 @@
+@import "../base/extend";
+@import "../base/mixin";
+@import "../base/variables";
+
+/*estilos main*/
+main {
+  .main-card {
+    .main-text {
+      margin: 1rem;
+      h2 {
+        align-content: center;
+        margin-bottom: 2rem;
+        font: size 1.5rem;
+      }
+      p {
+        margin: 1rem;
+         
+       }
+    }
+
+    .grid-main {
+      .card {
+        @extend %card-style;
+      }
+      .card-styles {
+        h2 {
+          color: $color-fuente;
+          @extend %card-title;
+        }
+        .img-description {
+          @extend %card-description;
+        }
+      }
+    }
+  }
+}
