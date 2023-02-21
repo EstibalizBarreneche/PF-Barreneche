@@ -242,26 +242,16 @@ main .main-card .grid-main .card-styles .img-description, main .card-container .
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-<<<<<<< HEAD
   text-decoration: none; }
 
 /*body*/
-=======
-}
-
-/* estilo mobile first */
-
-/*estilos del body*/
->>>>>>> rama-dos
 body {
   font-family: "Cinzel Decorative", cursive; }
 
 /*estilos del header*/
 header {
-<<<<<<< HEAD
   background-color: #fff8ea;
   display: flex;
   align-items: center;
@@ -298,136 +288,13 @@ header {
 
 /*comienzo estilos main*/
 /*contenido principal*/
-=======
-  height: 8rem;
-  width: 100%;
-  margin-bottom: 1rem;
-  background-color: #fff8ea;
-  padding: 0.5rem;
-  align-items: center;
-}
-
-header a h1 {
-  display: none;
-}
-
-nav {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background: grey; */
-  padding: 0;
-  background: #fff8ea;
-}
-
-.logo-h1 {
-  /* background-color: orange; */
-  width: 140px;
-  margin-left: 1.5rem;
-}
-.bar-btn {
-  bottom: 20px;
-  font-size: 2rem;
-  color: #594545;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-/* header .nav-link */
-
-.nav-list {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: 0vh;
-  top: 100px;
-  background: #fff8ea;
-  text-align: center;
-  transition: all 0.5s;
-}
-
-.nav-list li {
-  display: none;
-  line-height: 1.5rem;
-  margin: 1rem 0;
-  transition: all 0.5s;
-}
-
-.nav-list li a {
-  color: #815b5b;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.nav-list li a.active,
-.nav-list li a.nav-link:hover {
-  color: #3c2317;
-  transition: 0.3s;
-  opacity: 0.95;
-}
-#check {
-  display: none;
-}
-
-#check:checked ~ .nav-list {
-  height: 100vh;
-}
-
-#check:checked ~ .nav-list li {
-  display: block;
-}
-
-/* estilos de main */
->>>>>>> rama-dos
 main {
   display: flex;
   align-items: center;
   padding: 2rem;
-<<<<<<< HEAD
   justify-content: center;
-=======
-}
-
-main h2 {
-  margin: 1rem;
-  font-size: 1.5rem;
-}
-
-main h2 span {
-  display: block;
-}
-main div p {
-  margin-bottom: 1rem;
-}
-
-div .p-img {
-  position: absolute;
-
-  top: 25em;
-  right: 2em;
-  width: fit-content;
-
-  color: whitesmoke;
-  text-decoration: bold;
-}
-
-/* estilos de section */
-section {
-  display: flex;
-}
-
-section div img {
-  width: 15%;
-  margin-bottom: 10px;
-}
-section div {
-  background-color: #fff8ea;
-  display: flex;
->>>>>>> rama-dos
   flex-direction: column;
   text-align: center;
-<<<<<<< HEAD
   font-size: 1rem; }
   main .main-text h2 {
     margin-bottom: 2rem;
@@ -440,194 +307,6 @@ section div {
     height: auto;
     width: 100%; }
   main .img-ppal .p-img {
-=======
-  font-size: 0.7rem;
-}
-
-/*estilo de main*/
-img {
-  margin-top: 30px;
-  max-width: 100%;
-}
-
-.card {
-  background: rgb(194, 190, 191);
-  background: linear-gradient(
-    42deg,
-    rgba(206, 199, 201, 0.786) 0%,
-    rgba(197, 195, 195, 0.03) 100%
-  );
-  margin: 0.5rem;
-  max-width: 410px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
-  display: inline-block;
-}
-
-.card-styles h2.img-title {
-  color: #594545;
-  text-align: center;
-}
-
-.card-styles p.img-description {
-  color: rgb(129, 91, 91);
-  text-align: center;
-}
-
-.card-contact {
-  margin: 0.5rem;
-  width: 23rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
-  display: flex;
-}
-.contact {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.nombre {
-  padding: 0.7rem;
-}
-
-/* estilo del footer */
-footer {
-  background-color: #815b5b;
-}
-footer p a {
-  text-decoration: none;
-  color: #fff8ea;
-  font-size: 0.7rem;
-}
-
-.container {
-  height: 100px;
-  width: 100%;
-  color: #fff8ea;
-  text-align: center;
-  font-size: 0.7rem;
-}
-
-.footer-icons a i {
-  color: #fff8ea;
-  font-size: 1.5rem;
-
-  margin: 0.5rem;
-}
-
-.footer-icons a i:hover {
-  color: #3c2317;
-}
-
-.button-copyright a {
-  text-decoration: none;
-  color: #fff8ea;
-}
-
-.button-copyright a:hover {
-  color: #3c2317;
-  text-decoration: underline;
-}
-
-/* pantalla de desktop */
-
-@media screen and (min-width: 1024px) {
-  .grid-index {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header header"
-      "main main"
-      "main main"
-      "section section"
-      "footer footer";
-  }
-  header {
-    display: block;
-    display: flex;
-    height: 200px;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-
-    background-color: #fff8ea;
-    padding: 0.5rem;
-
-    grid-area: header;
-  }
-
-  .bar-btn {
-    display: none;
-  }
-
-  .nav-list {
-    position: relative;
-    height: 6rem;
-    top: 0;
-    justify-content: end;
-    transition: none;
-  }
-
-  .nav-list li {
-    display: inline-block;
-    line-height: 100px;
-    margin: 0 20px;
-    transition: none;
-  }
-
-  header .logo-h1 {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    text-decoration: none;
-    color: #594545;
-  }
-
-  header .logo-h1:hover {
-    opacity: 0.65;
-  }
-
-  header .img-logo {
-    margin: 10px;
-    padding: 5px;
-    color: #594545;
-  }
-
-  header .nav-list {
-    display: flex;
-    list-style: none;
-  }
-  header .nav-list .nav-link {
-    color: #594545;
-    text-decoration: none;
-    padding: 1rem 1rem 1rem 1rem;
-  }
-  .nav-link:hover {
-    opacity: 0.65;
-  }
-  /* estilos de main */
-  main {
-    grid-area: main;
-  }
-
-  main .main-text:hover {
-    transform: scale(1.1);
-  }
-
-  main .main-card .grid-main .card-one:hover {
-    transform: scale(1.1);
-  }
-  main .main-card .grid-main .card-two:hover {
-    transform: scale(1.1);
-  }
-
-  section {
-    grid-area: section;
-  }
-
-  div .p-img {
->>>>>>> rama-dos
     position: absolute;
     top: 35rem;
     right: 10%;
@@ -637,31 +316,10 @@ footer p a {
     font-weight: 700;
     font-size: 0.6rem; }
 
-<<<<<<< HEAD
 /*comienzo estilos section*/
 section {
   display: flex; }
   section div {
-=======
-  footer {
-    grid-area: footer;
-  }
-
-  footer p a {
-    text-decoration: none;
-    color: #fff8ea;
-  }
-  footer p a:hover {
-    color: #3c2317;
-  }
-
-  header .container {
-    display: block;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1rem;
-    margin-left: 1rem;
->>>>>>> rama-dos
     background-color: #fff8ea;
     display: flex;
     align-items: center;
