@@ -1,3 +1,4 @@
+@charset "UTF-8";
 main .main-card .grid-main .card {
   display: inline-block;
   text-align: center;
@@ -258,36 +259,47 @@ header {
   padding: 0.5rem;
   justify-content: space-between;
   flex-direction: none;
-  text-align: none; }
+  text-align: center;
+  height: 11rem; }
   header .logo-h1 {
-    width: 140px;
-    margin-left: 20px; }
+    width: 5rem; }
     header .logo-h1 .img-logo {
       padding: 0.5rem; }
-    header .logo-h1 h1 {
-      display: none; }
-  header div nav {
+  header h1 {
+    margin: 0.2rem; }
+  header nav {
     display: flex;
     align-items: center;
     padding: 0.2rem;
-    justify-content: none;
-    flex-direction: none;
+    justify-content: space-between;
+    flex-direction: column;
     text-align: center; }
-    header div nav .nav-list li {
-      display: flex;
-      align-items: center;
-      padding: 0.5rem;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center; }
-      header div nav .nav-list li .nav-link {
-        color: #594545;
-        padding: 0.2rem; }
-      header div nav .nav-list li .nav-link:hover {
+  header .nav-list {
+    position: absolute;
+    z-index: 1;
+    padding: 0 4rem;
+    margin: 0;
+    height: 21rem;
+    right: 0;
+    top: 7rem;
+    background: #fff8ea;
+    color: #594545;
+    transition: all 0.5s;
+    font-size: 1rem;
+    font-weight: 700; }
+    header .nav-list li {
+      line-height: 0.5rem;
+      margin: 0.5rem 0;
+      transition: all 0.5s; }
+      header .nav-list li .nav-link:hover {
         opacity: 65%; }
+  header .nav.list li a.active,
+  header .nav-list li a.nav-link:hover {
+    color: #3c2317;
+    transition: 0.3s;
+    opacity: 0.95; }
 
 /*comienzo estilos main*/
-/*contenido principal*/
 main {
   display: flex;
   align-items: center;
@@ -308,13 +320,14 @@ main {
     width: 100%; }
   main .img-ppal .p-img {
     position: absolute;
-    top: 35rem;
+    top: 30rem;
     right: 10%;
     left: 55%;
     color: whitesmoke;
     text-decoration: bold;
     font-weight: 700;
-    font-size: 0.6rem; }
+    margin: 0 0.5rem;
+    font-size: 0.5rem; }
 
 /*comienzo estilos section*/
 section {
@@ -334,6 +347,7 @@ section {
       margin-top: 30px;
       max-width: 100%; }
 
+/*comienzo de estilos de footer*/
 footer {
   background-color: #815b5b; }
   footer p {
@@ -368,12 +382,17 @@ footer {
       text-decoration: underline;
       color: #3c2317; }
 
+/*version desktop*/
 @media screen and (min-width: 1024px) {
   .grid-index {
     display: grid;
-    grid-template-columns: repeat 2, 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "header header" "main main" "main main" "section section" "footer footer"; }
+    grid-template-areas: "header header" "main main" "main main" "section section" "footer footer";
+    /*comienzo estilo header version desktop*/
+    /*comienzo estilos main version desktop*/
+    /*comienzo de section version desktop*/
+    /*comienzo de footer versión desktop*/ }
     .grid-index header {
       grid-area: header;
       display: block;
@@ -401,34 +420,61 @@ footer {
           color: #594545; }
         .grid-index header .logo-h1 .logo-h1:hover {
           opacity: 65%; }
-      .grid-index header div nav .nav-list {
+      .grid-index header .bar-btn {
+        display: none; }
+      .grid-index header nav .nav-list {
         display: flex;
+        align-items: center;
         position: relative;
         height: 6rem;
         top: 0;
         justify-content: end;
         transition: none; }
-        .grid-index header div nav .nav-list .nav-link {
+        .grid-index header nav .nav-list .nav-link {
           display: inline-block;
-          font-weight: 700;
-          line-height: 4rem;
-          margin: 0 1rem;
+          line-height: 2rem;
+          margin: 0 0.5rem;
           transition: none;
-          padding: 1rem 0.5rem 1rem 0.5rem; }
-        .grid-index header div nav .nav-list .nav-link:hover {
+          padding: 0.2rem; }
+        .grid-index header nav .nav-list .nav-link:hover {
           opacity: 0.65; }
     .grid-index main {
       grid-area: main; }
       .grid-index main .main-text:hover {
         transform: scale(1.1); }
+      .grid-index main .card-container .card h2 {
+        margin-top: 0.5rem; }
       .grid-index main .img-ppal .p-img {
-        font-size: 2rem; }
+        font-size: 2rem;
+        position: absolute;
+        top: 50rem; }
+      .grid-index main .main-card .grid-main h2 {
+        margin-top: 0.5rem; }
       .grid-index main .main-card .grid-main .card-one:hover {
         transform: scale(1.1); }
+      .grid-index main .main-card .grid-main .card-two p a {
+        text-decoration: none;
+        color: #594545;
+        padding: 1rem; }
       .grid-index main .main-card .grid-main .card-two:hover {
         transform: scale(1.1); }
     .grid-index section {
-      grid-area: section; }
+      grid-area: section;
+      display: flex; }
+      .grid-index section div {
+        background-color: #fff8ea;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1rem; }
+        .grid-index section div img {
+          width: 25%;
+          margin-bottom: 10px;
+          margin-top: 30px;
+          max-width: 100%; }
     .grid-index footer {
       grid-area: footer; }
       .grid-index footer p a {

@@ -22,39 +22,53 @@ body {
 /*estilos del header*/
 header {
   background-color: $color-fondo;
-  @include flex(0.5rem, space-between, none, none);
+  @include flex(0.5rem, space-between, none, center);
+  height: 11rem;
   .logo-h1 {
-    width: 140px;
-    margin-left: 20px;
+    width: 5rem;
     .img-logo {
       padding: 0.5rem;
     }
-    h1 {
-      display: none;
-    }
   }
-  div {
-    nav {
-      @include flex(0.2rem, none, none, center);
-      .nav-list {
-        li {
-          @include flex(0.5rem, center, column, center);
-          //display: flex;
-          .nav-link {
-            color: $color-fuente;
-            padding: 0.2rem;
-          }
-          .nav-link:hover {
-            opacity: 65%;
-          }
-        }
+  h1 {
+    margin: 0.2rem;
+  }
+
+  nav {
+    @include flex(0.2rem, space-between, column, center);
+  }
+  .nav-list {
+    position: absolute;
+    z-index: 1;
+    padding: 0 4rem;
+    margin: 0;
+    height: 21rem;
+    right: 0;
+    top: 7rem;
+    background: $color-fondo;
+    color: $color-fuente;
+    transition: all 0.5s;
+    font-size: 1rem;
+    font-weight: 700;
+    li {
+      line-height: 0.5rem;
+      margin: 0.5rem 0;
+      transition: all 0.5s;
+      .nav-link:hover {
+        opacity: 65%;
       }
     }
+  }
+
+  .nav.list li a.active,
+  .nav-list li a.nav-link:hover {
+    color: $color-iconos;
+    transition: 0.3s;
+    opacity: 0.95;
   }
 }
 
 /*comienzo estilos main*/
-/*contenido principal*/
 main {
   @include flex(2rem, center, column, center);
   font-size: 1rem;
@@ -77,13 +91,14 @@ main {
     }
     .p-img {
       position: absolute;
-      top: 35rem;
+      top: 30rem;
       right: 10%;
       left: 55%;
       color: whitesmoke;
       text-decoration: bold;
       font-weight: 700;
-      font-size: 0.6rem;
+      margin: 0 0.5rem;
+      font-size: 0.5rem;
     }
   }
 }
@@ -103,6 +118,8 @@ section {
     }
   }
 }
+
+/*comienzo de estilos de footer*/
 
 footer {
   background-color: $color-secundario;
@@ -148,6 +165,7 @@ footer {
   }
 }
 
+/*version desktop*/
 @media screen and (min-width: 1024px) {
   .grid-index {
     @include grid;
@@ -157,6 +175,7 @@ footer {
       "main main"
       "section section"
       "footer footer";
+    /*comienzo estilo header version desktop*/
     header {
       grid-area: header;
       display: block;
@@ -177,57 +196,98 @@ footer {
           opacity: 65%;
         }
       }
+      .bar-btn {
+        display: none;
+      }
 
-      div {
-        nav {
-          .nav-list {
-            display: flex;
+      nav {
+        .nav-list {
+          display: flex;
+          align-items: center;
+          position: relative;
+          height: 6rem;
+          top: 0;
+          justify-content: end;
+          transition: none;
+          .nav-link {
+            display: inline-block;
 
-            position: relative;
-            height: 6rem;
-            top: 0;
-            justify-content: end;
+            line-height: 2rem;
+            margin: 0 0.5rem;
             transition: none;
-            .nav-link {
-              display: inline-block;
-              font-weight: 700;
-
-              line-height: 4rem;
-              margin: 0 1rem;
-              transition: none;
-              padding: 1rem 0.5rem 1rem 0.5rem;
-            }
-            .nav-link:hover {
-              opacity: 0.65;
-            }
+            padding: 0.2rem;
+          }
+          .nav-link:hover {
+            opacity: 0.65;
           }
         }
       }
     }
+
+    /*comienzo estilos main version desktop*/
     main {
       grid-area: main;
       .main-text:hover {
         transform: scale(1.1);
       }
+      .card-container{
+        .card{ 
+          h2{
+            margin-top: 0.5rem;
+          }
+        }
+      }
       .img-ppal {
         .p-img {
           font-size: 2rem;
+          position: absolute;
+          top: 50rem;
         }
       }
+      
       .main-card {
         .grid-main {
+          h2 {
+            margin-top: 0.5rem;
+          }
           .card-one:hover {
             transform: scale(1.1);
           }
+          .card-two {
+            p {
+              a {
+                text-decoration: none;
+                color: $color-fuente;
+                padding: 1rem;
+              }
+            }
+          }
+
           .card-two:hover {
             transform: scale(1.1);
           }
         }
       }
     }
+
+    /*comienzo de section version desktop*/
     section {
       grid-area: section;
+      display: flex;
+      div {
+        background-color: $color-fondo;
+        @include flex(0.5rem, space-around, column, center);
+        font-size: 1rem;
+        img {
+          width: 25%;
+          margin-bottom: 10px;
+          margin-top: 30px;
+          max-width: 100%;
+        }
+      }
     }
+
+    /*comienzo de footer versión desktop*/
     footer {
       grid-area: footer;
       p {
@@ -241,5 +301,4 @@ footer {
       }
     }
   }
-
 }
