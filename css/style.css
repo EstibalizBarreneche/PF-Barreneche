@@ -266,7 +266,10 @@ header {
     header .logo-h1 .img-logo {
       padding: 0.5rem; }
   header h1 {
-    margin: 0.2rem; }
+    margin: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #594545; }
   header nav {
     display: flex;
     align-items: center;
@@ -285,7 +288,7 @@ header {
     background: #fff8ea;
     color: #594545;
     transition: all 0.5s;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 700; }
     header .nav-list li {
       line-height: 0.5rem;
@@ -309,18 +312,23 @@ main {
   text-align: center;
   font-size: 1rem; }
   main .main-text h2 {
-    margin-bottom: 2rem;
-    font: size 1.5rem; }
+    margin-bottom: 0.5rem;
+    font-size: 1rem; }
     main .main-text h2 span {
       display: block; }
   main .main-text p {
-    margin-bottom: 1rem; }
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem; }
+  main .img-bg {
+    display: none; }
+  main .img-ball {
+    display: none; }
   main .img-ppal img {
     height: auto;
-    width: 100%; }
+    width: 105%; }
   main .img-ppal .p-img {
     position: absolute;
-    top: 30rem;
+    top: 25rem;
     right: 10%;
     left: 55%;
     color: whitesmoke;
@@ -328,6 +336,33 @@ main {
     font-weight: 700;
     margin: 0 0.5rem;
     font-size: 0.5rem; }
+  main .card-container .card .img-title {
+    margin-top: 0.5rem;
+    font-size: 1rem; }
+  main .card-container .card .img-description {
+    font-size: 0.8rem; }
+  main .main-card .grid-main .img-title {
+    margin-top: 0.5rem;
+    font-size: 1rem; }
+  main .main-card .grid-main .img-description {
+    font-size: 0.8rem; }
+  main .main-card .grid-main .card-two p a {
+    text-decoration: none;
+    color: #594545;
+    padding: 1rem; }
+  main .contact-us legend {
+    font-size: 0.8rem; }
+  main .contact-us .contact {
+    font-size: 0.8rem; }
+  main .contact-us .mensaje {
+    font-size: 0.8rem; }
+  main .contact-us .botones {
+    font-size: 0.7rem;
+    color: #3c2317;
+    background-color: #fff8ea;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border-style: hidden; }
 
 /*comienzo estilos section*/
 section {
@@ -340,7 +375,8 @@ section {
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
-    font-size: 0.7rem; }
+    font-size: 0.6rem;
+    color: #594545; }
     section div img {
       width: 40%;
       margin-bottom: 10px;
@@ -356,7 +392,7 @@ footer {
     footer p a {
       text-decoration: none;
       color: #fff8ea;
-      font-size: 0.7rem; }
+      font-size: 0.6rem; }
     footer p a:hover {
       color: #3c2317; }
   footer .container {
@@ -367,14 +403,14 @@ footer {
     flex-direction: column;
     text-align: center;
     color: #fff8ea;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-decoration: none; }
+    footer .container h3 {
+      font-size: 1rem; }
     footer .container .footer-icons a i {
       color: #fff8ea;
       font-size: 1.5rem;
       margin: 0.5rem; }
-    footer .container .footer-icons a i:hover {
-      color: #3c2317; }
     footer .container .button-copyright a {
       text-decoration: none;
       color: #fff8ea; }
@@ -413,13 +449,13 @@ footer {
         justify-content: space-between;
         flex-direction: column;
         text-align: center; }
-        .grid-index header .logo-h1 h1 {
-          font-size: 1rem;
-          display: block;
-          text-decoration: none;
-          color: #594545; }
         .grid-index header .logo-h1 .logo-h1:hover {
           opacity: 65%; }
+      .grid-index header h1 {
+        font-size: 2rem;
+        display: block;
+        text-decoration: none;
+        color: #594545; }
       .grid-index header .bar-btn {
         display: none; }
       .grid-index header nav .nav-list {
@@ -429,7 +465,8 @@ footer {
         height: 6rem;
         top: 0;
         justify-content: end;
-        transition: none; }
+        transition: none;
+        font-size: 1rem; }
         .grid-index header nav .nav-list .nav-link {
           display: inline-block;
           line-height: 2rem;
@@ -440,16 +477,41 @@ footer {
           opacity: 0.65; }
     .grid-index main {
       grid-area: main; }
+      .grid-index main .main-text h2 {
+        margin-bottom: 0.5rem;
+        font-size: 3rem; }
+        .grid-index main .main-text h2 span {
+          display: block; }
+      .grid-index main .main-text p {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem; }
       .grid-index main .main-text:hover {
         transform: scale(1.1); }
-      .grid-index main .card-container .card h2 {
-        margin-top: 0.5rem; }
+      .grid-index main .img-bg {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 15rem;
+        right: 10rem;
+        opacity: 0.2;
+        width: 30rem; }
+      .grid-index main .img-ball {
+        display: block;
+        position: absolute;
+        left: 0.5rem;
+        top: 17rem;
+        z-index: -2;
+        height: 35rem;
+        opacity: 0.2; }
       .grid-index main .img-ppal .p-img {
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: absolute;
         top: 50rem; }
-      .grid-index main .main-card .grid-main h2 {
-        margin-top: 0.5rem; }
+      .grid-index main .main-card .grid-main .img-title {
+        margin-top: 0.5rem;
+        font-size: 1.5rem; }
+      .grid-index main .main-card .grid-main .img-description {
+        font-size: 1rem; }
       .grid-index main .main-card .grid-main .card-one:hover {
         transform: scale(1.1); }
       .grid-index main .main-card .grid-main .card-two p a {
@@ -458,6 +520,27 @@ footer {
         padding: 1rem; }
       .grid-index main .main-card .grid-main .card-two:hover {
         transform: scale(1.1); }
+      .grid-index main .card-container .card .img-title {
+        margin-top: 0.5rem;
+        font-size: 1.5rem; }
+      .grid-index main .card-container .card .img-description {
+        font-size: 1rem; }
+      .grid-index main .contact-us legend {
+        font-size: 1.5rem; }
+      .grid-index main .contact-us .contact {
+        font-size: 1rem; }
+      .grid-index main .contact-us .mensaje {
+        font-size: 1rem; }
+      .grid-index main .contact-us .botones {
+        font-size: 1rem;
+        color: #3c2317;
+        background-color: #fff8ea;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        border-style: hidden; }
+      .grid-index main .contact-us .botones:hover {
+        color: #fff8ea;
+        background-color: #3c2317; }
     .grid-index section {
       grid-area: section;
       display: flex; }
@@ -479,6 +562,15 @@ footer {
       grid-area: footer; }
       .grid-index footer p a {
         text-decoration: none;
-        color: #fff8ea; }
+        color: #fff8ea;
+        font-size: 0.8rem; }
       .grid-index footer p a:hover {
-        color: #3c2317; } }
+        color: #3c2317; }
+      .grid-index footer .container .footer-icons h3 {
+        font-size: 1.5rem; }
+      .grid-index footer .container .footer-icons a i {
+        font-size: 2.5rem; }
+      .grid-index footer .container .footer-icons a i:hover {
+        color: #3c2317; }
+      .grid-index footer .container .button-copyright {
+        font-size: 0.9rem; } }
