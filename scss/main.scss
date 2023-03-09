@@ -95,6 +95,8 @@ main {
     display: none;
   }
   .img-ppal {
+    margin-left: 0;
+    margin-right: 1.5rem;
     img {
       height: auto;
       width: 105%;
@@ -325,6 +327,9 @@ footer {
       }
 
       .img-ppal {
+        margin-left: 0;
+        margin-right: 5rem;
+       
         .p-img {
           font-size: 1.5rem;
           position: absolute;

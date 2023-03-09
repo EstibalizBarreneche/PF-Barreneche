@@ -323,19 +323,22 @@ main {
     display: none; }
   main .img-ball {
     display: none; }
-  main .img-ppal img {
-    height: auto;
-    width: 105%; }
-  main .img-ppal .p-img {
-    position: absolute;
-    top: 25rem;
-    right: 10%;
-    left: 55%;
-    color: whitesmoke;
-    text-decoration: bold;
-    font-weight: 700;
-    margin: 0 0.5rem;
-    font-size: 0.5rem; }
+  main .img-ppal {
+    margin-left: 0;
+    margin-right: 1.5rem; }
+    main .img-ppal img {
+      height: auto;
+      width: 105%; }
+    main .img-ppal .p-img {
+      position: absolute;
+      top: 25rem;
+      right: 10%;
+      left: 55%;
+      color: whitesmoke;
+      text-decoration: bold;
+      font-weight: 700;
+      margin: 0 0.5rem;
+      font-size: 0.5rem; }
   main .card-container .card .img-title {
     margin-top: 0.5rem;
     font-size: 1rem; }
@@ -503,10 +506,13 @@ footer {
         z-index: -2;
         height: 35rem;
         opacity: 0.2; }
-      .grid-index main .img-ppal .p-img {
-        font-size: 1.5rem;
-        position: absolute;
-        top: 50rem; }
+      .grid-index main .img-ppal {
+        margin-left: 0;
+        margin-right: 5rem; }
+        .grid-index main .img-ppal .p-img {
+          font-size: 1.5rem;
+          position: absolute;
+          top: 50rem; }
       .grid-index main .main-card .grid-main .img-title {
         margin-top: 0.5rem;
         font-size: 1.5rem; }
