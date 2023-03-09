@@ -366,6 +366,22 @@ main {
     padding: 0.3rem;
     border-radius: 0.5rem;
     border-style: hidden; }
+  main .video-container {
+    width: 100%;
+    margin: auto; }
+    main .video-container .video-content {
+      margin-left: 10%;
+      height: 0;
+      width: 90%;
+      max-width: 560px;
+      padding-top: 56.25%;
+      position: relative; }
+      main .video-container .video-content .video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0; }
 
 /*comienzo estilos section*/
 section {
@@ -547,6 +563,21 @@ footer {
       .grid-index main .contact-us .botones:hover {
         color: #fff8ea;
         background-color: #3c2317; }
+      .grid-index main .video-container {
+        width: 100%;
+        margin: auto; }
+        .grid-index main .video-container .video-content {
+          margin-left: 15%;
+          height: 0;
+          width: 100%;
+          padding: 15rem 25rem;
+          position: relative; }
+          .grid-index main .video-container .video-content .video {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0; }
     .grid-index section {
       grid-area: section;
       display: flex; }
